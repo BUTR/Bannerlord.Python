@@ -23,9 +23,9 @@ namespace Bannerlord.Python.Utils
 
         private ConstructorInfo? GetWrappedConstructor()
         {
-            var constructorInfo = AccessTools2.Constructor(typeof(SubModulePython), new[] {typeof(string), typeof(string), typeof(string)});
+            var constructorInfo = AccessTools2.Constructor(typeof(SubModulePython), new[] { typeof(string), typeof(string), typeof(string) });
             if (constructorInfo is null) return null;
-            return new WrappedConstructorInfo(constructorInfo, new object[] {_moduleFolder, _scriptName, _subModuleClassType});
+            return new WrappedConstructorInfo(constructorInfo, new object[] { _moduleFolder, _scriptName, _subModuleClassType });
         }
 
         public override object[] GetCustomAttributes(bool inherit) => _typeImplementation.GetCustomAttributes(inherit);
