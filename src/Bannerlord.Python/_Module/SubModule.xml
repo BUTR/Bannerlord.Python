@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Module>
   <Name value="Python Support" />
-  <Id value="$modulename$" />
+  <Id value="$moduleid$" />
   <Version value="v$version$" />
   <Official value="false" />
   <DefaultModule value="false" />
@@ -22,9 +22,9 @@
   <!-- Prototype -->
   <SubModules>
     <SubModule>
-      <Name value="$modulename$" />
-      <DLLName value="$modulename$.dll" />
-      <SubModuleClassType value="$modulename$.SubModule" />
+      <Name value="$moduleid$" />
+      <DLLName value="$moduleid$.dll" />
+      <SubModuleClassType value="$moduleid$.SubModule" />
       <Assemblies>
         <Assembly value="IronPython.dll"/>
         <Assembly value="IronPython.Modules.dll"/>
