@@ -1,25 +1,43 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Module>
-  <Name value="Python Support" />
+<Module xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/BUTR/Bannerlord.XmlSchemas/master/SubModule.xsd" >
   <Id value="$moduleid$" />
+  <Name value="$modulename$" />
   <Version value="v$version$" />
   <Official value="false" />
   <DefaultModule value="false" />
   <SingleplayerModule value="true" />
   <MultiplayerModule value="false" />
+  <ModuleCategory value="Singleplayer" />
+  <Url value="" />
   <DependedModules>
-    <DependedModule Id="Bannerlord.Harmony" />
+    <!-- BUTRLoader or any launcher that provides this feature will ignore this Dependency-marker -->
+    <!-- but the default launcher will not let this module to be loaded -->
+    <DependedModule Id="BUTRLoader.BUTRLoadingInterceptor" Optional="false" />
+
+    <DependedModule Id="Bannerlord.Harmony" DependentVersion="v$harmonyversion$" />
+    <DependedModule Id="Bannerlord.ButterLib" DependentVersion="v$butterlibversion$" />
   </DependedModules>
-  <!-- Prototype -->
+  <ModulesToLoadAfterThis>
+    <Module Id="Native" />
+    <Module Id="SandBoxCore" />
+    <Module Id="Sandbox" />
+    <Module Id="StoryMode" />
+    <Module Id="CustomBattle" />
+  </ModulesToLoadAfterThis>
+  <!-- Community Dependency Metadata -->
+  <!-- https://github.com/BUTR/Bannerlord.BUTRLoader#for-modders -->
   <DependedModuleMetadatas>
-    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" />
-    <DependedModuleMetadata id="Native" order="LoadAfterThis" optional="true" />
-    <DependedModuleMetadata id="SandBoxCore" order="LoadAfterThis" optional="true" />
-    <DependedModuleMetadata id="Sandbox" order="LoadAfterThis" optional="true" />
-    <DependedModuleMetadata id="StoryMode" order="LoadAfterThis" optional="true" />
-    <DependedModuleMetadata id="CustomBattle" order="LoadAfterThis" optional="true" />
+    <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v$harmonyversion$" />
+    <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" version="v$butterlibversion$" />
+
+    <DependedModuleMetadata id="Native" order="LoadAfterThis" optional="true" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="SandBoxCore" order="LoadAfterThis" optional="true" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="Sandbox" order="LoadAfterThis" optional="true" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="StoryMode" order="LoadAfterThis" optional="true" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="CustomBattle" order="LoadAfterThis" optional="true" version="e$gameversion$.*" />
   </DependedModuleMetadatas>
-  <!-- Prototype -->
+  <!-- Community Dependency Metadata -->
   <SubModules>
     <SubModule>
       <Name value="$moduleid$" />

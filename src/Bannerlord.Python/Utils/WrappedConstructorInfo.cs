@@ -26,8 +26,7 @@ namespace Bannerlord.Python.Utils
         public override MethodImplAttributes GetMethodImplementationFlags() =>
             _constructorInfoImplementation.GetMethodImplementationFlags();
 
-        public override object Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters,
-            CultureInfo culture) =>
+        public override object Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture) =>
             _constructorInfoImplementation.Invoke(obj, invokeAttr, binder, parameters, culture);
 
         public override string Name => _constructorInfoImplementation.Name;
@@ -39,8 +38,7 @@ namespace Bannerlord.Python.Utils
         public override object[] GetCustomAttributes(Type attributeType, bool inherit) =>
             _constructorInfoImplementation.GetCustomAttributes(attributeType, inherit);
 
-        public override object Invoke(BindingFlags invokeAttr, Binder binder, object[] parameters,
-            CultureInfo culture) =>
+        public override object Invoke(BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture) =>
             _constructorInfoImplementation.Invoke(invokeAttr, binder, _args, culture);
     }
 }

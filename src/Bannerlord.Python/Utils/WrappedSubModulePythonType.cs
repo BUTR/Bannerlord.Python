@@ -39,11 +39,11 @@ namespace Bannerlord.Python.Utils
         public override Type GetNestedType(string name, BindingFlags bindingAttr) => _typeImplementation.GetNestedType(name, bindingAttr);
         public override Type? GetElementType() => _typeImplementation.GetElementType();
         protected override bool HasElementTypeImpl() => _typeImplementation.HasElementType;
-        protected override PropertyInfo? GetPropertyImpl(string name, BindingFlags bindingAttr, Binder binder, Type returnType, Type[] types, ParameterModifier[] modifiers)
-            => _typeImplementation.GetProperty(name, bindingAttr, binder, returnType, types, modifiers);
+        protected override PropertyInfo? GetPropertyImpl(string name, BindingFlags bindingAttr, Binder binder, Type returnType, Type[] types, ParameterModifier[] modifiers) =>
+            _typeImplementation.GetProperty(name, bindingAttr, binder, returnType, types, modifiers);
         public override PropertyInfo[] GetProperties(BindingFlags bindingAttr) => _typeImplementation.GetProperties(bindingAttr);
-        protected override MethodInfo? GetMethodImpl(string name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, Type[] types, ParameterModifier[] modifiers)
-            => _typeImplementation.GetMethod(name, bindingAttr, binder, callConvention, types, modifiers);
+        protected override MethodInfo? GetMethodImpl(string name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, Type[] types, ParameterModifier[] modifiers) =>
+            _typeImplementation.GetMethod(name, bindingAttr, binder, callConvention, types, modifiers);
         public override MethodInfo[] GetMethods(BindingFlags bindingAttr) => _typeImplementation.GetMethods(bindingAttr);
         public override FieldInfo? GetField(string name, BindingFlags bindingAttr) => _typeImplementation.GetField(name, bindingAttr);
         public override FieldInfo[] GetFields(BindingFlags bindingAttr) => _typeImplementation.GetFields(bindingAttr);
@@ -54,8 +54,8 @@ namespace Bannerlord.Python.Utils
         protected override bool IsPointerImpl() => _typeImplementation.IsPointer;
         protected override bool IsPrimitiveImpl() => _typeImplementation.IsPrimitive;
         protected override bool IsCOMObjectImpl() => _typeImplementation.IsCOMObject;
-        public override object InvokeMember(string name, BindingFlags invokeAttr, Binder binder, object target, object[] args, ParameterModifier[] modifiers, CultureInfo culture, string[] namedParameters)
-            => _typeImplementation.InvokeMember(name, invokeAttr, binder, target, args, modifiers, culture, namedParameters);
+        public override object InvokeMember(string name, BindingFlags invokeAttr, Binder binder, object target, object[] args, ParameterModifier[] modifiers, CultureInfo culture, string[] namedParameters) =>
+            _typeImplementation.InvokeMember(name, invokeAttr, binder, target, args, modifiers, culture, namedParameters);
 
         public override Type UnderlyingSystemType => _typeImplementation.UnderlyingSystemType;
         protected override ConstructorInfo? GetConstructorImpl(BindingFlags bindingAttr, Binder? binder, CallingConventions callConvention, Type[] types, ParameterModifier[]? modifiers)
@@ -74,7 +74,6 @@ namespace Bannerlord.Python.Utils
         public override string? Namespace => _typeImplementation.Namespace;
         public override string? AssemblyQualifiedName => _typeImplementation.AssemblyQualifiedName;
         public override Type? BaseType => _typeImplementation.BaseType;
-        public override object[] GetCustomAttributes(Type attributeType, bool inherit)
-            => _typeImplementation.GetCustomAttributes(attributeType, inherit);
+        public override object[] GetCustomAttributes(Type attributeType, bool inherit) => _typeImplementation.GetCustomAttributes(attributeType, inherit);
     }
 }

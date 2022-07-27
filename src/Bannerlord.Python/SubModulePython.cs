@@ -37,7 +37,7 @@ namespace Bannerlord.Python
         {
             base.OnSubModuleLoad();
 
-            if (_subModule?.OnSubModuleLoad is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnSubModuleLoad", out dynamic closure))
             {
                 closure();
             }
@@ -47,7 +47,7 @@ namespace Bannerlord.Python
         {
             base.OnSubModuleUnloaded();
 
-            if (_subModule?.OnSubModuleUnloaded is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnSubModuleUnloaded", out dynamic closure))
             {
                 closure();
             }
@@ -57,7 +57,7 @@ namespace Bannerlord.Python
         {
             base.OnApplicationTick(dt);
 
-            if (_subModule?.OnApplicationTick is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnApplicationTick", out dynamic closure))
             {
                 closure(dt);
             }
@@ -67,7 +67,7 @@ namespace Bannerlord.Python
         {
             base.OnBeforeInitialModuleScreenSetAsRoot();
 
-            if (_subModule?.OnBeforeInitialModuleScreenSetAsRoot is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnBeforeInitialModuleScreenSetAsRoot", out dynamic closure))
             {
                 closure();
             }
@@ -77,7 +77,7 @@ namespace Bannerlord.Python
         {
             base.OnGameStart(game, gameStarterObject);
 
-            if (_subModule?.OnGameStart is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnGameStart", out dynamic closure))
             {
                 closure(game, gameStarterObject);
             }
@@ -85,7 +85,7 @@ namespace Bannerlord.Python
 
         public void OnServiceRegistration()
         {
-            if (_subModule?.OnServiceRegistration is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnServiceRegistration", out dynamic closure))
             {
                 closure();
             }
@@ -96,9 +96,9 @@ namespace Bannerlord.Python
             if (!base.DoLoading(game))
                 return false;
 
-            if (_subModule?.DoLoading is { } closure && closure(game) is bool value)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "DoLoading", out dynamic closure))
             {
-                return value;
+                return closure(game) is bool value && value;
             }
 
             return false;
@@ -108,7 +108,7 @@ namespace Bannerlord.Python
         {
             base.OnGameLoaded(game, initializerObject);
 
-            if (_subModule?.OnGameLoaded is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnGameLoaded", out dynamic closure))
             {
                 closure(game, initializerObject);
             }
@@ -118,7 +118,7 @@ namespace Bannerlord.Python
         {
             base.OnCampaignStart(game, starterObject);
 
-            if (_subModule?.OnCampaignStart is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnCampaignStart", out dynamic closure))
             {
                 closure(game, starterObject);
             }
@@ -128,7 +128,7 @@ namespace Bannerlord.Python
         {
             base.BeginGameStart(game);
 
-            if (_subModule?.BeginGameStart is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "BeginGameStart", out dynamic closure))
             {
                 closure(game);
             }
@@ -138,7 +138,7 @@ namespace Bannerlord.Python
         {
             base.OnGameEnd(game);
 
-            if (_subModule?.OnGameEnd is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnGameEnd", out dynamic closure))
             {
                 closure(game);
             }
@@ -148,17 +148,17 @@ namespace Bannerlord.Python
         {
             base.OnGameInitializationFinished(game);
 
-            if (_subModule?.OnGameInitializationFinished is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnGameInitializationFinished", out dynamic closure))
             {
                 closure(game);
             }
         }
 
-        public override void OnMissionBehaviourInitialize(Mission mission)
+        public override void OnMissionBehaviorInitialize(Mission mission)
         {
-            base.OnMissionBehaviourInitialize(mission);
+            base.OnMissionBehaviorInitialize(mission);
 
-            if (_subModule?.OnMissionBehaviourInitialize is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnMissionBehaviourInitialize", out dynamic closure))
             {
                 closure(mission);
             }
@@ -168,7 +168,7 @@ namespace Bannerlord.Python
         {
             base.OnMultiplayerGameStart(game, starterObject);
 
-            if (_subModule?.OnMultiplayerGameStart is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnMultiplayerGameStart", out dynamic closure))
             {
                 closure(game, starterObject);
             }
@@ -178,7 +178,7 @@ namespace Bannerlord.Python
         {
             base.OnNewGameCreated(game, initializerObject);
 
-            if (_subModule?.OnNewGameCreated is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnNewGameCreated", out dynamic closure))
             {
                 closure(game, initializerObject);
             }
@@ -188,9 +188,79 @@ namespace Bannerlord.Python
         {
             base.OnConfigChanged();
 
-            if (_subModule?.OnConfigChanged is { } closure)
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnConfigChanged", out dynamic closure))
             {
                 closure();
+            }
+        }
+
+        protected override void InitializeGameStarter(Game game, IGameStarter starterObject)
+        {
+            base.InitializeGameStarter(game, starterObject);
+            
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "InitializeGameStarter", out dynamic closure))
+            {
+                closure(game, starterObject);
+            }
+        }
+
+        public override void OnInitialState()
+        {
+            base.OnInitialState();      
+            
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnInitialState", out dynamic closure))
+            {
+                closure();
+            }
+        }
+
+        public override void RegisterSubModuleObjects(bool isSavedCampaign)
+        {
+            base.RegisterSubModuleObjects(isSavedCampaign);
+            
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "RegisterSubModuleObjects", out dynamic closure))
+            {
+                closure(isSavedCampaign);
+            }
+        }
+
+        public override void AfterRegisterSubModuleObjects(bool isSavedCampaign)
+        {
+            base.AfterRegisterSubModuleObjects(isSavedCampaign);
+            
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "AfterRegisterSubModuleObjects", out dynamic closure))
+            {
+                closure(isSavedCampaign);
+            }
+        }
+
+        public override void OnAfterGameInitializationFinished(Game game, object starterObject)
+        {
+            base.OnAfterGameInitializationFinished(game, starterObject);
+            
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnAfterGameInitializationFinished", out dynamic closure))
+            {
+                closure(game, starterObject);
+            }
+        }
+
+        public override void OnBeforeMissionBehaviorInitialize(Mission mission)
+        {
+            base.OnBeforeMissionBehaviorInitialize(mission);
+            
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "OnBeforeMissionBehaviorInitialize", out dynamic closure))
+            {
+                closure(mission);
+            }
+        }
+
+        protected override void AfterAsyncTickTick(float dt)
+        {
+            base.AfterAsyncTickTick(dt);
+            
+            if (_scriptEngine.Operations.TryGetMember(_subModule, "AfterAsyncTickTick", out dynamic closure))
+            {
+                closure(dt);
             }
         }
     }

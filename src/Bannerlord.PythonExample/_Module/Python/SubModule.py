@@ -1,15 +1,24 @@
-﻿class SubModule(object):
-  def __init__(self, base):
-    self.base = base
+﻿import clr
+clr.AddReference("TaleWorlds.Library")
 
-  def OnSubModuleLoad(self):
-      self.base.SubModuleLoad();
-      return;
+from TaleWorlds.Library import InformationMessage
+from TaleWorlds.Library import InformationManager
 
-  def OnSubModuleUnloaded(self):
-      self.base.SubModuleUnloaded();
-      return;
+class SubModule(object):
+    def __init__(self, base):
+        self.base = base
 
-  def OnBeforeInitialModuleScreenSetAsRoot(self):
-      self.base.BeforeInitialModuleScreenSetAsRoot();
-      return;
+    def OnSubModuleLoad(self):
+        self.base.OnSubModuleLoad()
+        return
+
+    def OnSubModuleUnloaded(self):
+        self.base.OnSubModuleUnloaded()
+        return
+
+    def OnBeforeInitialModuleScreenSetAsRoot(self):
+        self.base.OnBeforeInitialModuleScreenSetAsRoot()
+
+        message = InformationMessage("test")
+        InformationManager.DisplayMessage(message)
+        return

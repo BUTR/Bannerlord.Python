@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Xml;
 
+using TaleWorlds.Engine;
+
 using Module = TaleWorlds.MountAndBlade.Module;
 
 namespace Bannerlord.Python
@@ -23,10 +25,13 @@ namespace Bannerlord.Python
         {
             var loadedSubModuleTypes = LoadedSubModuleTypes?.Invoke(Module.CurrentModule);
 
+            var baseFolder = Utilities.GetBasePath();
+            
             foreach (var moduleInfo in ModuleInfoHelper.GetLoadedModules())
             {
+                var moduleFolder = System.IO.Path.Combine(baseFolder, "Modules", moduleInfo.Id);
                 var xmlDocument = new XmlDocument();
-                xmlDocument.Load(moduleInfo.XmlPath);
+                xmlDocument.Load(System.IO.Path.Combine(moduleFolder, "SubModule.xml"));
 
                 var moduleNode = xmlDocument.SelectSingleNode("Module");
 
@@ -38,7 +43,7 @@ namespace Bannerlord.Python
                     var name = subModuleNode?.SelectSingleNode("Name")?.Attributes["value"]?.InnerText ?? string.Empty;
                     var scriptName = subModuleNode?.SelectSingleNode("ScriptName")?.Attributes["value"]?.InnerText ?? string.Empty;
                     var subModuleClassType = subModuleNode?.SelectSingleNode("SubModuleClassType")?.Attributes["value"]?.InnerText ?? string.Empty;
-                    loadedSubModuleTypes?.Add(name, new WrappedSubModulePythonType(moduleInfo.Folder, scriptName, subModuleClassType));
+                    loadedSubModuleTypes?.Add(name, new WrappedSubModulePythonType(moduleFolder, scriptName, subModuleClassType));
                 }
             }
         }

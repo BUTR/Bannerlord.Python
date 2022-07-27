@@ -1,4 +1,4 @@
-﻿using Bannerlord.ButterLib.SubModuleWrappers;
+﻿using Bannerlord.ButterLib.SubModuleWrappers2;
 
 using TaleWorlds.MountAndBlade;
 
