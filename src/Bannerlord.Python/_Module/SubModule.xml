@@ -9,7 +9,7 @@
   <SingleplayerModule value="true" />
   <MultiplayerModule value="false" />
   <ModuleCategory value="Singleplayer" />
-  <Url value="" />
+  <Url value="https://www.nexusmods.com/mountandblade2bannerlord/mods/4252" />
   <DependedModules>
     <!-- BUTRLoader or any launcher that provides this feature will ignore this Dependency-marker -->
     <!-- but the default launcher will not let this module to be loaded -->
