@@ -36,6 +36,8 @@
   </br>
 </p>
 
+Sources available at [GitHub](https://github.com/BUTR/Bannerlord.Python)!
+
 This is an experimental module for installing modules written in [IronPython3](https://github.com/IronLanguages/ironpython3).  
 Requires [BUTRLoader](https://www.nexusmods.com/mountandblade2bannerlord/mods/2513) v1.8.2 to be installed and the game to be run via [BUTRLoader](https://www.nexusmods.com/mountandblade2bannerlord/mods/2513). We will try to create a workaround for running the game via Vortex in the future.
 
@@ -45,4 +47,5 @@ Make sure that [BUTRLoader](https://www.nexusmods.com/mountandblade2bannerlord/m
 
 ## For Modders
 Use [this](https://github.com/BUTR/Bannerlord.Python/tree/master/src/Bannerlord.IronPythonExample) as an example of how to create a IronPython module. We'll create a dotnet template once we are sure the template is correct.  
-We don't have anyone who knows Python enough to provide support. Please check [IronPython3 documentation](https://ironpython.net/documentation/dotnet/) on how to interact with C#, the documentation contains enough examples.
+We don't have anyone who knows Python enough to provide support. Please check [IronPython3 documentation](https://ironpython.net/documentation/dotnet/) on how to interact with C#, the documentation contains enough examples.  
+Please note that IronPython does not provide all features of Python3! [Check the CPython differences](https://github.com/IronLanguages/ironpython3/blob/master/Documentation/differences-from-c-python.md) and [the Whats New files on GitHub](https://github.com/IronLanguages/ironpython3)!
