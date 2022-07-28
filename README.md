@@ -19,7 +19,7 @@
   </a>
   </br>
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/4252" alt="NexusMods IronPython">
-    <img src="https://img.shields.io/badge/NexusMods-UIExtenderEx-yellow.svg" />
+    <img src="https://img.shields.io/badge/NexusMods-IronPython%20Support-yellow.svg" />
   </a>  
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/4252" alt="NexusMods IronPython">
     <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnexusmods-version-pzk4e0ejol6j.runkit.sh%3FgameId%3Dmountandblade2bannerlord%26modId%3D4252" />
