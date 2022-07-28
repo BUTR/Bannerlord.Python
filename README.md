@@ -36,8 +36,6 @@
   </br>
 </p>
 
-Sources available at [GitHub](https://github.com/BUTR/Bannerlord.Python)!
-
 This is an experimental module for installing modules written in [IronPython3](https://github.com/IronLanguages/ironpython3).  
 Requires [BUTRLoader](https://www.nexusmods.com/mountandblade2bannerlord/mods/2513) v1.8.2 to be installed and the game to be run via [BUTRLoader](https://www.nexusmods.com/mountandblade2bannerlord/mods/2513). We will try to create a workaround for running the game via Vortex in the future.
 
