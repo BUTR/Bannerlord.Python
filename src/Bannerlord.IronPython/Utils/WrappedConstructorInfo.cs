@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Reflection;
 
-namespace Bannerlord.Python.Utils
+namespace Bannerlord.IronPython.Utils
 {
     internal sealed class WrappedConstructorInfo : ConstructorInfo
     {

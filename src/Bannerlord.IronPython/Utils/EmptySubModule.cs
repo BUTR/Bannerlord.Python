@@ -2,7 +2,7 @@
 
 using TaleWorlds.MountAndBlade;
 
-namespace Bannerlord.Python.Utils
+namespace Bannerlord.IronPython.Utils
 {
     internal class EmptySubModule : MBSubModuleBaseWrapper
     {

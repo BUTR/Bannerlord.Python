@@ -4,11 +4,11 @@ using System;
 using System.Globalization;
 using System.Reflection;
 
-namespace Bannerlord.Python.Utils
+namespace Bannerlord.IronPython.Utils
 {
     internal class WrappedSubModulePythonType : Type
     {
-        private readonly Type _typeImplementation = typeof(SubModulePython);
+        private readonly Type _typeImplementation = typeof(SubModuleIronPython);
 
         private readonly string _moduleFolder;
         private readonly string _scriptName;
@@ -23,7 +23,7 @@ namespace Bannerlord.Python.Utils
 
         private ConstructorInfo? GetWrappedConstructor()
         {
-            var constructorInfo = AccessTools2.Constructor(typeof(SubModulePython), new[] { typeof(string), typeof(string), typeof(string) });
+            var constructorInfo = AccessTools2.Constructor(_typeImplementation, new[] { typeof(string), typeof(string), typeof(string) });
             if (constructorInfo is null) return null;
             return new WrappedConstructorInfo(constructorInfo, new object[] { _moduleFolder, _scriptName, _subModuleClassType });
         }

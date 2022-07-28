@@ -1,0 +1,24 @@
+<Project Sdk="Bannerlord.DataModule.Sdk/1.0.1.68">
+
+  <PropertyGroup>
+    <Version>0.0.1</Version>
+    <TargetFramework>net472</TargetFramework>
+    <Platforms>x64</Platforms>
+    <ModuleId>$(MSBuildProjectName)</ModuleId>
+    <ModuleName>IronPython Module Example</ModuleName>
+    <GameFolder>$(BANNERLORD_GAME_DIR)</GameFolder>
+    <IronPythonVersion>3.4.0</IronPythonVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SubModuleOverrides Include="IronPythonVersion" Visible="false">
+      <Regex>\$pythonversion\$</Regex>
+      <Replacement>$(IronPythonVersion)</Replacement>
+    </SubModuleOverrides>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="**/*" Exclude="bin/**/*;obj/**/*"/>
+  </ItemGroup>
+
+</Project>

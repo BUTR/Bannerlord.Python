@@ -1,6 +1,6 @@
 ﻿using TaleWorlds.MountAndBlade;
 
-namespace Bannerlord.Python
+namespace Bannerlord.IronPython
 {
     public class SubModule : MBSubModuleBase { }
 }

@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{A06436E9-465A-41BB-92DE-431A404C0461}"
+	ProjectSection(SolutionItems) = preProject
+		..\changelog.txt = ..\changelog.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2B6C595C-6918-4E6E-A319-D7BDCBED13C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{511AEF3E-BBE4-45E3-9504-4E5CB8935CD5}"
+	ProjectSection(SolutionItems) = preProject
+		..\build\common.props = ..\build\common.props
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bannerlord.IronPython", "Bannerlord.IronPython\Bannerlord.IronPython.csproj", "{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A8A6D103-467E-4CFC-BEDE-BF4ED20E27ED}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\dotnet-format-daily.yml = ..\.github\workflows\dotnet-format-daily.yml
+		..\.github\workflows\publish.yml = ..\.github\workflows\publish.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bannerlord.IronPythonExample", "Bannerlord.IronPythonExample\Bannerlord.IronPythonExample.mbsuildproj", "{2714FE83-03D3-4204-A45E-604667B66C9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Beta_Debug|x64 = Beta_Debug|x64
+		Stable_Debug|x64 = Stable_Debug|x64
+		Beta_Release|x64 = Beta_Release|x64
+		Stable_Release|x64 = Stable_Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}.Beta_Debug|x64.ActiveCfg = Beta_Debug|x64
+		{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}.Beta_Debug|x64.Build.0 = Beta_Debug|x64
+		{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}.Stable_Debug|x64.ActiveCfg = Stable_Debug|x64
+		{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}.Stable_Debug|x64.Build.0 = Stable_Debug|x64
+		{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}.Beta_Release|x64.ActiveCfg = Beta_Release|x64
+		{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}.Beta_Release|x64.Build.0 = Beta_Release|x64
+		{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}.Stable_Release|x64.ActiveCfg = Stable_Release|x64
+		{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}.Stable_Release|x64.Build.0 = Stable_Release|x64
+		{2714FE83-03D3-4204-A45E-604667B66C9A}.Beta_Debug|x64.ActiveCfg = Beta_Debug|x64
+		{2714FE83-03D3-4204-A45E-604667B66C9A}.Beta_Debug|x64.Build.0 = Beta_Debug|x64
+		{2714FE83-03D3-4204-A45E-604667B66C9A}.Stable_Debug|x64.ActiveCfg = Stable_Debug|x64
+		{2714FE83-03D3-4204-A45E-604667B66C9A}.Stable_Debug|x64.Build.0 = Stable_Debug|x64
+		{2714FE83-03D3-4204-A45E-604667B66C9A}.Beta_Release|x64.ActiveCfg = Beta_Release|x64
+		{2714FE83-03D3-4204-A45E-604667B66C9A}.Beta_Release|x64.Build.0 = Beta_Release|x64
+		{2714FE83-03D3-4204-A45E-604667B66C9A}.Stable_Release|x64.ActiveCfg = Stable_Release|x64
+		{2714FE83-03D3-4204-A45E-604667B66C9A}.Stable_Release|x64.Build.0 = Stable_Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2B6C595C-6918-4E6E-A319-D7BDCBED13C4} = {A06436E9-465A-41BB-92DE-431A404C0461}
+		{511AEF3E-BBE4-45E3-9504-4E5CB8935CD5} = {A06436E9-465A-41BB-92DE-431A404C0461}
+		{288B7D9A-00A5-4FF2-B8DC-F227378C15B5} = {2B6C595C-6918-4E6E-A319-D7BDCBED13C4}
+		{A8A6D103-467E-4CFC-BEDE-BF4ED20E27ED} = {A06436E9-465A-41BB-92DE-431A404C0461}
+		{2714FE83-03D3-4204-A45E-604667B66C9A} = {2B6C595C-6918-4E6E-A319-D7BDCBED13C4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A13F87EA-6D2C-45A8-926C-C8EF09402394}
+	EndGlobalSection
+EndGlobal

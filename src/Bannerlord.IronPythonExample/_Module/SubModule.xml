@@ -11,7 +11,7 @@
   <ModuleCategory value="Singleplayer" />
   <Url value="" />
   <DependedModules>
-    <DependedModule Id="Bannerlord.Python" DependentVersion="v$pythonversion$" />
+    <DependedModule Id="Bannerlord.IronPython" DependentVersion="v$pythonversion$" />
     <DependedModule Id="Native" DependentVersion="e$gameversion$.*" />
     <DependedModule Id="SandBoxCore" DependentVersion="e$gameversion$.*" />
     <DependedModule Id="Sandbox" DependentVersion="e$gameversion$.*" />
@@ -21,7 +21,7 @@
   <!-- Community Dependency Metadata -->
   <!-- https://github.com/BUTR/Bannerlord.BUTRLoader#for-modders -->
   <DependedModuleMetadatas>
-    <DependedModuleMetadata id="Bannerlord.Python" order="LoadBeforeThis" version="v$pythonversion$" />
+    <DependedModuleMetadata id="Bannerlord.IronPython" order="LoadBeforeThis" version="v$pythonversion$" />
 
     <DependedModuleMetadata id="Native" order="LoadBeforeThis" optional="true" version="e$gameversion$.*" />
     <DependedModuleMetadata id="SandBoxCore" order="LoadBeforeThis" optional="true" version="e$gameversion$.*" />

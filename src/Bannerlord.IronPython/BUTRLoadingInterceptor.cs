@@ -1,6 +1,6 @@
 ﻿using Bannerlord.BUTR.Shared.Helpers;
 using Bannerlord.BUTRLoader;
-using Bannerlord.Python.Utils;
+using Bannerlord.IronPython.Utils;
 
 using HarmonyLib;
 using HarmonyLib.BUTR.Extensions;
@@ -13,7 +13,7 @@ using TaleWorlds.Engine;
 
 using Module = TaleWorlds.MountAndBlade.Module;
 
-namespace Bannerlord.Python
+namespace Bannerlord.IronPython
 {
     [BUTRLoaderInterceptor]
     public static class BUTRLoadingInterceptor
@@ -26,7 +26,7 @@ namespace Bannerlord.Python
             var loadedSubModuleTypes = LoadedSubModuleTypes?.Invoke(Module.CurrentModule);
 
             var baseFolder = Utilities.GetBasePath();
-            
+
             foreach (var moduleInfo in ModuleInfoHelper.GetLoadedModules())
             {
                 var moduleFolder = System.IO.Path.Combine(baseFolder, "Modules", moduleInfo.Id);
