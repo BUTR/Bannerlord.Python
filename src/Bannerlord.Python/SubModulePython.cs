@@ -197,7 +197,7 @@ namespace Bannerlord.Python
         protected override void InitializeGameStarter(Game game, IGameStarter starterObject)
         {
             base.InitializeGameStarter(game, starterObject);
-            
+
             if (_scriptEngine.Operations.TryGetMember(_subModule, "InitializeGameStarter", out dynamic closure))
             {
                 closure(game, starterObject);
@@ -206,8 +206,8 @@ namespace Bannerlord.Python
 
         public override void OnInitialState()
         {
-            base.OnInitialState();      
-            
+            base.OnInitialState();
+
             if (_scriptEngine.Operations.TryGetMember(_subModule, "OnInitialState", out dynamic closure))
             {
                 closure();
@@ -217,7 +217,7 @@ namespace Bannerlord.Python
         public override void RegisterSubModuleObjects(bool isSavedCampaign)
         {
             base.RegisterSubModuleObjects(isSavedCampaign);
-            
+
             if (_scriptEngine.Operations.TryGetMember(_subModule, "RegisterSubModuleObjects", out dynamic closure))
             {
                 closure(isSavedCampaign);
@@ -227,7 +227,7 @@ namespace Bannerlord.Python
         public override void AfterRegisterSubModuleObjects(bool isSavedCampaign)
         {
             base.AfterRegisterSubModuleObjects(isSavedCampaign);
-            
+
             if (_scriptEngine.Operations.TryGetMember(_subModule, "AfterRegisterSubModuleObjects", out dynamic closure))
             {
                 closure(isSavedCampaign);
@@ -237,7 +237,7 @@ namespace Bannerlord.Python
         public override void OnAfterGameInitializationFinished(Game game, object starterObject)
         {
             base.OnAfterGameInitializationFinished(game, starterObject);
-            
+
             if (_scriptEngine.Operations.TryGetMember(_subModule, "OnAfterGameInitializationFinished", out dynamic closure))
             {
                 closure(game, starterObject);
@@ -247,7 +247,7 @@ namespace Bannerlord.Python
         public override void OnBeforeMissionBehaviorInitialize(Mission mission)
         {
             base.OnBeforeMissionBehaviorInitialize(mission);
-            
+
             if (_scriptEngine.Operations.TryGetMember(_subModule, "OnBeforeMissionBehaviorInitialize", out dynamic closure))
             {
                 closure(mission);
@@ -257,7 +257,7 @@ namespace Bannerlord.Python
         protected override void AfterAsyncTickTick(float dt)
         {
             base.AfterAsyncTickTick(dt);
-            
+
             if (_scriptEngine.Operations.TryGetMember(_subModule, "AfterAsyncTickTick", out dynamic closure))
             {
                 closure(dt);

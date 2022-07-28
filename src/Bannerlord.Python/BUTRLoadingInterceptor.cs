@@ -26,7 +26,7 @@ namespace Bannerlord.Python
             var loadedSubModuleTypes = LoadedSubModuleTypes?.Invoke(Module.CurrentModule);
 
             var baseFolder = Utilities.GetBasePath();
-            
+
             foreach (var moduleInfo in ModuleInfoHelper.GetLoadedModules())
             {
                 var moduleFolder = System.IO.Path.Combine(baseFolder, "Modules", moduleInfo.Id);
