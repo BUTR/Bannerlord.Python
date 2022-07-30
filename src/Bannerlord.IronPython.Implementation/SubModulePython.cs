@@ -1,4 +1,4 @@
-﻿using Bannerlord.IronPython.Utils;
+﻿using Bannerlord.IronPython.Implementation.Utils;
 
 using IronPython.Hosting;
 
@@ -9,7 +9,7 @@ using System.IO;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 
-namespace Bannerlord.IronPython
+namespace Bannerlord.IronPython.Implementation
 {
     internal class SubModuleIronPython : MBSubModuleBase
     {

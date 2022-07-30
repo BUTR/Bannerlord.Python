@@ -40,19 +40,10 @@
   <!-- Community Dependency Metadata -->
   <SubModules>
     <SubModule>
-      <Name value="$moduleid$" />
+      <Name value="$moduleid$ Implementation Loader" />
       <DLLName value="$moduleid$.dll" />
-      <SubModuleClassType value="$moduleid$.SubModule" />
-      <Assemblies>
-        <Assembly value="IronPython.dll"/>
-        <Assembly value="IronPython.Modules.dll"/>
-        <Assembly value="IronPython.SQLite.dll"/>
-        <Assembly value="IronPython.Wpf.dll"/>
-        <Assembly value="Microsoft.Dynamic.dll"/>
-        <Assembly value="Microsoft.Scripting.dll"/>
-        <Assembly value="Microsoft.Scripting.Metadata.dll"/>
-      </Assemblies>
-      <Tags/>
+      <SubModuleClassType value="$moduleid$.ImplementationLoaderSubModule" />
+      <Tags />
     </SubModule>
   </SubModules>
 </Module>

@@ -4,10 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{A06436E9-465A-41BB-92DE-431A404C0461}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\changelog.txt = ..\changelog.txt
+		..\README.md = ..\README.md
+		..\supported-game-versions.txt = ..\supported-game-versions.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2B6C595C-6918-4E6E-A319-D7BDCBED13C4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bannerlord.IronPython", "Bannerlord.IronPython\Bannerlord.IronPython.csproj", "{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bannerlord.IronPython.Implementation", "Bannerlord.IronPython.Implementation\Bannerlord.IronPython.Implementation.csproj", "{288B7D9A-00A5-4FF2-B8DC-F227378C15B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A8A6D103-467E-4CFC-BEDE-BF4ED20E27ED}"
 	ProjectSection(SolutionItems) = preProject
@@ -15,7 +21,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		..\.github\workflows\publish.yml = ..\.github\workflows\publish.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bannerlord.IronPythonExample", "Bannerlord.IronPythonExample\Bannerlord.IronPythonExample.mbsuildproj", "{2714FE83-03D3-4204-A45E-604667B66C9A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bannerlord.IronPythonExample", "Bannerlord.IronPythonExample\Bannerlord.IronPythonExample.msbuildproj", "{2714FE83-03D3-4204-A45E-604667B66C9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bannerlord.IronPython", "Bannerlord.IronPython\Bannerlord.IronPython.csproj", "{4B69953D-0FE8-4144-B6F4-F88DA8DAC911}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{D7CE4E85-B7AD-41F7-AB35-7660C3CFA7B9}"
+	ProjectSection(SolutionItems) = preProject
+		..\build\common.props = ..\build\common.props
+		..\build\common.targets = ..\build\common.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +55,14 @@ Global
 		{2714FE83-03D3-4204-A45E-604667B66C9A}.Beta_Release|x64.Build.0 = Beta_Release|x64
 		{2714FE83-03D3-4204-A45E-604667B66C9A}.Stable_Release|x64.ActiveCfg = Stable_Release|x64
 		{2714FE83-03D3-4204-A45E-604667B66C9A}.Stable_Release|x64.Build.0 = Stable_Release|x64
+		{4B69953D-0FE8-4144-B6F4-F88DA8DAC911}.Beta_Debug|x64.ActiveCfg = Debug|Any CPU
+		{4B69953D-0FE8-4144-B6F4-F88DA8DAC911}.Beta_Debug|x64.Build.0 = Debug|Any CPU
+		{4B69953D-0FE8-4144-B6F4-F88DA8DAC911}.Stable_Debug|x64.ActiveCfg = Debug|Any CPU
+		{4B69953D-0FE8-4144-B6F4-F88DA8DAC911}.Stable_Debug|x64.Build.0 = Debug|Any CPU
+		{4B69953D-0FE8-4144-B6F4-F88DA8DAC911}.Beta_Release|x64.ActiveCfg = Debug|Any CPU
+		{4B69953D-0FE8-4144-B6F4-F88DA8DAC911}.Beta_Release|x64.Build.0 = Debug|Any CPU
+		{4B69953D-0FE8-4144-B6F4-F88DA8DAC911}.Stable_Release|x64.ActiveCfg = Debug|Any CPU
+		{4B69953D-0FE8-4144-B6F4-F88DA8DAC911}.Stable_Release|x64.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +72,8 @@ Global
 		{288B7D9A-00A5-4FF2-B8DC-F227378C15B5} = {2B6C595C-6918-4E6E-A319-D7BDCBED13C4}
 		{A8A6D103-467E-4CFC-BEDE-BF4ED20E27ED} = {A06436E9-465A-41BB-92DE-431A404C0461}
 		{2714FE83-03D3-4204-A45E-604667B66C9A} = {2B6C595C-6918-4E6E-A319-D7BDCBED13C4}
+		{4B69953D-0FE8-4144-B6F4-F88DA8DAC911} = {2B6C595C-6918-4E6E-A319-D7BDCBED13C4}
+		{D7CE4E85-B7AD-41F7-AB35-7660C3CFA7B9} = {A06436E9-465A-41BB-92DE-431A404C0461}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A13F87EA-6D2C-45A8-926C-C8EF09402394}

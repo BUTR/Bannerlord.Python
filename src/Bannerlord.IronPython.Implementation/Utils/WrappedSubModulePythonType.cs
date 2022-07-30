@@ -4,7 +4,7 @@ using System;
 using System.Globalization;
 using System.Reflection;
 
-namespace Bannerlord.IronPython.Utils
+namespace Bannerlord.IronPython.Implementation.Utils
 {
     internal class WrappedSubModulePythonType : Type
     {
