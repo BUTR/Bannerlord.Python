@@ -26,8 +26,36 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
 
       - name: Build Bannerlord.IronPython
-        run: dotnet pack src/Bannerlord.IronPython/Bannerlord.IronPython.csproj --configuration Release -p:GameFolder="$PWD/bannerlord";
-        shell: pwsh
+      run: |
+        $impl = $PWD.Path + '/bannerlord-implementations';
+        $path = $PWD.Path + '/bannerlord';
+        $final = $path + '/Modules/Bannerlord.IronPython/bin/Win64_Shipping_Client/';
+        $proj = 'src/Bannerlord.IronPython.Implementation/Bannerlord.IronPython.Implementation.csproj';
+        $pdll = $path + '/Modules/Bannerlord.IronPython/bin/Win64_Shipping_Client/Bannerlord.IronPython.Implementation.*.dll';
+        $ppdb = $path + '/Modules/Bannerlord.IronPython/bin/Win64_Shipping_Client/Bannerlord.IronPython.Implementation.*.pdb';
+        # The folders are required to be created before executing the script
+        New-Item -ItemType directory -Force -Path $impl;
+        New-Item -ItemType directory -Force -Path $path;
+        [string[]]$gameversions = Get-Content -Path supported-game-versions.txt;
+        # Last entry is the Minimal version. We will use Bannerlord.IronPython.dll from there
+        For ($i = 0; $i -le $gameversions.Length - 1; $i++)
+        {
+            $gameversion = $gameversions[$i];
+            $version = $gameversion.substring(1);
+            $constgameversion = $gameversion.replace(".", "");
+            dotnet clean $proj --configuration Release;
+            dotnet build $proj --configuration Release -p:OverrideGameVersion=$gameversion -p:GameFolder="$path" -p:GameVersionConstant="$constgameversion";
+            # Copy Implementations to the Implementations folder
+            Copy-Item $pdll $impl/;
+            Copy-Item $ppdb $impl/;
+        }
+        # Copy Implementations to the Module
+        Copy-Item $impl/* $final;
+        # Delete Implementations folder
+        Remove-Item -Recurse $impl;
+      shell: pwsh
+      env:
+        BANNERLORD_BUTR_UPLOAD_URL: ${{secrets.BANNERLORD_BUTR_UPLOAD_URL}}
 
       - name: Upload Bannerlord folder
         uses: actions/upload-artifact@v3
@@ -67,9 +95,9 @@ jobs:
       - name: Run ChangelogParser
         id: changelog
         run: |
-          vers="$(bannerlord_changelog_parser latestversion -f "$PWD/src/Bannerlord.IronPython/changelog.txt")"
+          vers="$(bannerlord_changelog_parser latestversion -f "$PWD/changelog.txt")"
           echo "::set-output name=mod_version::$vers"
-          desc="$(bannerlord_changelog_parser fulldescription -f "$PWD/src/Bannerlord.IronPython/changelog.txt")"
+          desc="$(bannerlord_changelog_parser fulldescription -f "$PWD/changelog.txt")"
           desc="${desc//'%'/'%25'}"
           desc="${desc//$'\n'/'%0A'}"
           desc="${desc//$'\r'/'%0D'}"
