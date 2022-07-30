@@ -20,12 +20,12 @@ jobs:
     name: Build for distribution
     runs-on: ubuntu-latest
     steps:
-      - name: Setup
-        uses: butr/actions-common-setup@v2.0
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
+    - name: Setup
+      uses: butr/actions-common-setup@v2.0
+      with:
+        github-token: ${{secrets.GITHUB_TOKEN}}
 
-      - name: Build Bannerlord.IronPython
+    - name: Build Bannerlord.IronPython
       run: |
         $impl = $PWD.Path + '/bannerlord-implementations';
         $path = $PWD.Path + '/bannerlord';
@@ -57,11 +57,11 @@ jobs:
       env:
         BANNERLORD_BUTR_UPLOAD_URL: ${{secrets.BANNERLORD_BUTR_UPLOAD_URL}}
 
-      - name: Upload Bannerlord folder
-        uses: actions/upload-artifact@v3
-        with:
-          name: bannerlord
-          path: ./bannerlord/
+    - name: Upload Bannerlord folder
+      uses: actions/upload-artifact@v3
+      with:
+        name: bannerlord
+        path: ./bannerlord/
   
   ###########################
   #         GITHUB          #
