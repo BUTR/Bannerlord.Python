@@ -81,6 +81,7 @@ jobs:
     uses: BUTR/workflows/.github/workflows/release-steam.yml@master
     with:
       workshop_id: 2859285207
+      mod_id: Bannerlord.IronPython
       mod_description: ${{ needs.build-module.outputs.mod_description }}
       artifact_name: bannerlord
     secrets:
