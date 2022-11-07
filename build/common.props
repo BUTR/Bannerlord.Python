@@ -12,8 +12,8 @@
     <HarmonyAnalyzerVersion>1.0.1.44</HarmonyAnalyzerVersion>
     <ButterLibVersion>2.3.6</ButterLibVersion>
     <!--BuildResources Version-->
-    <BuildResourcesVersion>1.0.1.68</BuildResourcesVersion>
-    <BUTRSharedVersion>3.0.0.121</BUTRSharedVersion>
+    <BuildResourcesVersion>1.0.1.80</BuildResourcesVersion>
+    <BUTRSharedVersion>2.0.0.121</BUTRSharedVersion>
     <BUTRModuleManagerVersion>4.0.147</BUTRModuleManagerVersion>
   </PropertyGroup>
 
