@@ -13,7 +13,7 @@
   <DependedModules>
     <!-- BUTRLoader or any launcher that provides this feature will ignore this Dependency-marker -->
     <!-- but the default launcher will not let this module to be loaded -->
-    <DependedModule Id="BUTRLoader.BUTRLoadingInterceptor" Optional="false" />
+    <DependedModule Id="BLSE.LoadingInterceptor" Optional="false" />
 
     <DependedModule Id="Bannerlord.Harmony" DependentVersion="v$harmonyversion$" />
     <DependedModule Id="Bannerlord.ButterLib" DependentVersion="v$butterlibversion$" />

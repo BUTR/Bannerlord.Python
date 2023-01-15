@@ -4,10 +4,10 @@
   <!--Development Variables-->
   <PropertyGroup>
     <IronPythonVersion>3.4.0</IronPythonVersion>
-    <Version>$(IronPythonVersion).1</Version>
+    <Version>$(IronPythonVersion).2</Version>
 
     <!--Harmony Version-->
-    <HarmonyVersion>2.2.1</HarmonyVersion>
+    <HarmonyVersion>2.2.2</HarmonyVersion>
     <HarmonyExtensionsVersion>3.2.0.72</HarmonyExtensionsVersion>
     <HarmonyAnalyzerVersion>1.0.1.44</HarmonyAnalyzerVersion>
     <ButterLibVersion>2.6.2</ButterLibVersion>
