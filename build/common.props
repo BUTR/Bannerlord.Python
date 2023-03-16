@@ -10,7 +10,7 @@
     <HarmonyVersion>2.2.2</HarmonyVersion>
     <HarmonyExtensionsVersion>3.2.0.72</HarmonyExtensionsVersion>
     <HarmonyAnalyzerVersion>1.0.1.44</HarmonyAnalyzerVersion>
-    <ButterLibVersion>2.6.2</ButterLibVersion>
+    <ButterLibVersion>2.7.2</ButterLibVersion>
     <!--BuildResources Version-->
     <BuildResourcesVersion>1.0.1.87</BuildResourcesVersion>
     <BUTRSharedVersion>3.0.0.127</BUTRSharedVersion>
