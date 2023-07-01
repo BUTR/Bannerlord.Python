@@ -53,7 +53,7 @@
 </p>
 
 This is an experimental module for installing modules written in [IronPython3](https://github.com/IronLanguages/ironpython3).  
-Requires [BLSE](https://www.nexusmods.com/mountandblade2bannerlord/mods/1) v1.8.2 to be installed and the game to be run via [BLSE](https://www.nexusmods.com/mountandblade2bannerlord/mods/1). We will try to create a workaround for running the game via Vortex in the future.
+Requires [BLSE](https://www.nexusmods.com/mountandblade2bannerlord/mods/1) to be installed and the game to be run via [BLSE](https://www.nexusmods.com/mountandblade2bannerlord/mods/1). We will try to create a workaround for running the game via Vortex in the future.
 
 ## For Players
 Make sure that [BLSE](https://www.nexusmods.com/mountandblade2bannerlord/mods/1) is installed and the game is run via [BLSE](https://www.nexusmods.com/mountandblade2bannerlord/mods/1).  
