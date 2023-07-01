@@ -34,6 +34,22 @@
     <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnexusmods-downloads-ayuqql60xfxb.runkit.sh%2F%3Ftype%3Dviews%26gameId%3D3174%26modId%3D4252" />
   </a>
   </br>
+  <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859285207">
+    <img alt="Steam Mod Configuration Menu" src="https://img.shields.io/badge/Steam-IronPython%20Support-blue.svg" />
+  </a>
+  <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859285207">
+    <img alt="Steam Downloads" src="https://img.shields.io/steam/downloads/2859285207?label=Downloads&color=blue">
+  </a>
+  <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859285207">
+    <img alt="Steam Views" src="https://img.shields.io/steam/views/2859285207?label=Views&color=blue">
+  </a>
+  <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859285207">
+    <img alt="Steam Subscriptions" src="https://img.shields.io/steam/subscriptions/2859285207?label=Subscriptions&color=blue">
+  </a>
+  <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859285207">
+    <img alt="Steam Favorites" src="https://img.shields.io/steam/favorites/2859285207?label=Favorites&color=blue">
+  </a>
+  </br>
 </p>
 
 This is an experimental module for installing modules written in [IronPython3](https://github.com/IronLanguages/ironpython3).  
