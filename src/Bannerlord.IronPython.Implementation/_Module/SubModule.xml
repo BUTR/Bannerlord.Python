@@ -4,16 +4,14 @@
   <Id value="$moduleid$" />
   <Name value="$modulename$" />
   <Version value="v$version$" />
-  <Official value="false" />
   <DefaultModule value="false" />
-  <SingleplayerModule value="true" />
-  <MultiplayerModule value="false" />
+  <ModuleType value="Community" />
   <ModuleCategory value="Singleplayer" />
   <Url value="https://www.nexusmods.com/mountandblade2bannerlord/mods/4252" />
   <DependedModules>
     <!-- BUTRLoader or any launcher that provides this feature will ignore this Dependency-marker -->
     <!-- but the default launcher will not let this module to be loaded -->
-    <DependedModule Id="BUTRLoader.BUTRLoadingInterceptor" Optional="false" />
+    <DependedModule Id="BLSE.LoadingInterceptor" Optional="false" />
 
     <DependedModule Id="Bannerlord.Harmony" DependentVersion="v$harmonyversion$" />
     <DependedModule Id="Bannerlord.ButterLib" DependentVersion="v$butterlibversion$" />
@@ -31,11 +29,11 @@
     <DependedModuleMetadata id="Bannerlord.Harmony" order="LoadBeforeThis" version="v$harmonyversion$" />
     <DependedModuleMetadata id="Bannerlord.ButterLib" order="LoadBeforeThis" version="v$butterlibversion$" />
 
-    <DependedModuleMetadata id="Native" order="LoadAfterThis" optional="true" version="e$gameversion$.*" />
-    <DependedModuleMetadata id="SandBoxCore" order="LoadAfterThis" optional="true" version="e$gameversion$.*" />
-    <DependedModuleMetadata id="Sandbox" order="LoadAfterThis" optional="true" version="e$gameversion$.*" />
-    <DependedModuleMetadata id="StoryMode" order="LoadAfterThis" optional="true" version="e$gameversion$.*" />
-    <DependedModuleMetadata id="CustomBattle" order="LoadAfterThis" optional="true" version="e$gameversion$.*" />
+    <DependedModuleMetadata id="Native" order="LoadAfterThis" optional="true" version="v$gameversion$.*" />
+    <DependedModuleMetadata id="SandBoxCore" order="LoadAfterThis" optional="true" version="v$gameversion$.*" />
+    <DependedModuleMetadata id="Sandbox" order="LoadAfterThis" optional="true" version="v$gameversion$.*" />
+    <DependedModuleMetadata id="StoryMode" order="LoadAfterThis" optional="true" version="v$gameversion$.*" />
+    <DependedModuleMetadata id="CustomBattle" order="LoadAfterThis" optional="true" version="v$gameversion$.*" />
   </DependedModuleMetadatas>
   <!-- Community Dependency Metadata -->
   <SubModules>

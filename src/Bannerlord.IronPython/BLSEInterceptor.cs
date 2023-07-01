@@ -11,14 +11,14 @@ using System.Reflection;
 
 namespace Bannerlord.IronPython
 {
-    [BUTRLoaderInterceptor]
-    public static class BUTRLoadingInterceptor
+    [BLSEInterceptor]
+    public static class BLSEInterceptor
     {
         private delegate void OnInitializeSubModulesPrefixDelegate();
         private delegate void OnLoadSubModulesPostfixDelegate();
 
         private static bool CheckType(Type type) => type.GetCustomAttributes()
-            .Any(att => string.Equals(att.GetType().FullName, typeof(BUTRLoaderInterceptorAttribute).FullName, StringComparison.Ordinal));
+            .Any(att => string.Equals(att.GetType().FullName, typeof(BLSEInterceptorAttribute).FullName, StringComparison.Ordinal));
 
         private static IEnumerable<Type> GetInterceptorTypes(Assembly assembly)
         {
