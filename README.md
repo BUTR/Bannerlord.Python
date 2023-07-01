@@ -53,10 +53,10 @@
 </p>
 
 This is an experimental module for installing modules written in [IronPython3](https://github.com/IronLanguages/ironpython3).  
-Requires [BUTRLoader](https://www.nexusmods.com/mountandblade2bannerlord/mods/2513) v1.8.2 to be installed and the game to be run via [BUTRLoader](https://www.nexusmods.com/mountandblade2bannerlord/mods/2513). We will try to create a workaround for running the game via Vortex in the future.
+Requires [BLSE](https://www.nexusmods.com/mountandblade2bannerlord/mods/1) v1.8.2 to be installed and the game to be run via [BLSE](https://www.nexusmods.com/mountandblade2bannerlord/mods/1). We will try to create a workaround for running the game via Vortex in the future.
 
 ## For Players
-Make sure that [BUTRLoader](https://www.nexusmods.com/mountandblade2bannerlord/mods/2513) is installed and the game is run via [BUTRLoader](https://www.nexusmods.com/mountandblade2bannerlord/mods/2513).  
+Make sure that [BLSE](https://www.nexusmods.com/mountandblade2bannerlord/mods/1) is installed and the game is run via [BLSE](https://www.nexusmods.com/mountandblade2bannerlord/mods/1).  
 [Bannerlord.Harmony](https://www.nexusmods.com/mountandblade2bannerlord/mods/2006) and [Bannerlord.ButterLib](https://www.nexusmods.com/mountandblade2bannerlord/mods/2018) are also required!
 
 ## For Modders
