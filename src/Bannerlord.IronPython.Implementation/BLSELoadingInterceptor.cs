@@ -16,7 +16,7 @@ using Module = TaleWorlds.MountAndBlade.Module;
 namespace Bannerlord.IronPython.Implementation
 {
     [BLSEInterceptor]
-    public static class BUTRLoadingInterceptor
+    public static class BLSELoadingInterceptor
     {
         private static readonly AccessTools.FieldRef<Module, Dictionary<string, Type>>? LoadedSubModuleTypes =
             AccessTools2.FieldRefAccess<Module, Dictionary<string, Type>>("_loadedSubmoduleTypes");

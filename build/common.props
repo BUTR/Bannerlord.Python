@@ -4,17 +4,17 @@
   <!--Development Variables-->
   <PropertyGroup>
     <IronPythonVersion>3.4.0</IronPythonVersion>
-    <Version>$(IronPythonVersion).2</Version>
+    <Version>$(IronPythonVersion).3</Version>
 
     <!--Harmony Version-->
     <HarmonyVersion>2.2.2</HarmonyVersion>
-    <HarmonyExtensionsVersion>3.2.0.72</HarmonyExtensionsVersion>
-    <HarmonyAnalyzerVersion>1.0.1.44</HarmonyAnalyzerVersion>
-    <ButterLibVersion>2.6.2</ButterLibVersion>
+    <HarmonyExtensionsVersion>3.2.0.77</HarmonyExtensionsVersion>
+    <HarmonyAnalyzerVersion>1.0.1.50</HarmonyAnalyzerVersion>
+    <ButterLibVersion>2.8.1</ButterLibVersion>
     <!--BuildResources Version-->
-    <BuildResourcesVersion>1.0.1.87</BuildResourcesVersion>
-    <BUTRSharedVersion>3.0.0.127</BUTRSharedVersion>
-    <BUTRModuleManagerVersion>5.0.166</BUTRModuleManagerVersion>
+    <BuildResourcesVersion>1.1.0.102</BuildResourcesVersion>
+    <BUTRSharedVersion>3.0.0.136</BUTRSharedVersion>
+    <BUTRModuleManagerVersion>5.0.209</BUTRModuleManagerVersion>
   </PropertyGroup>
 
   <PropertyGroup>

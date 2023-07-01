@@ -1,4 +1,4 @@
-<Project Sdk="Bannerlord.DataModule.Sdk/1.0.1.68">
+<Project Sdk="Bannerlord.DataModule.Sdk/1.1.0.102">
 
   <PropertyGroup>
     <IronPythonVersion>3.4.0</IronPythonVersion>
