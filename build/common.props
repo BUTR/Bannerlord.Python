@@ -13,7 +13,7 @@
     <ButterLibVersion>2.8.1</ButterLibVersion>
     <!--BuildResources Version-->
     <BuildResourcesVersion>1.1.0.102</BuildResourcesVersion>
-    <BUTRSharedVersion>3.0.0.136</BUTRSharedVersion>
+    <BUTRSharedVersion>3.0.0.137</BUTRSharedVersion>
     <BUTRModuleManagerVersion>5.0.209</BUTRModuleManagerVersion>
   </PropertyGroup>
 
