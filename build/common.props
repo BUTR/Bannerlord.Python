@@ -3,7 +3,7 @@
 
   <!--Development Variables-->
   <PropertyGroup>
-    <IronPythonVersion>3.4.0</IronPythonVersion>
+    <IronPythonVersion>3.4.1</IronPythonVersion>
     <Version>$(IronPythonVersion).3</Version>
 
     <!--Harmony Version-->
