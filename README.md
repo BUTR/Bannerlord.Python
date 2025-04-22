@@ -20,18 +20,18 @@
   </br>
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/4252" alt="NexusMods IronPython">
     <img src="https://img.shields.io/badge/NexusMods-IronPython%20Support-yellow.svg" />
-  </a>  
-  <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/4252" alt="NexusMods IronPython">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnexusmods-version-pzk4e0ejol6j.runkit.sh%3FgameId%3Dmountandblade2bannerlord%26modId%3D4252" />
   </a>
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/4252" alt="NexusMods IronPython">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnexusmods-downloads-ayuqql60xfxb.runkit.sh%2F%3Ftype%3Dunique%26gameId%3D3174%26modId%3D4252" />
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnmstats.butr.link%2Fmod-version%3FgameId%3D3174%26modId%3D4252" />
   </a>
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/4252" alt="NexusMods IronPython">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnexusmods-downloads-ayuqql60xfxb.runkit.sh%2F%3Ftype%3Dtotal%26gameId%3D3174%26modId%3D4252" />
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnmstats.butr.link%2Fdownloads%3Ftype%3Dunique%26gameId%3D3174%26modId%3D4252" />
   </a>
   <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/4252" alt="NexusMods IronPython">
-    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnexusmods-downloads-ayuqql60xfxb.runkit.sh%2F%3Ftype%3Dviews%26gameId%3D3174%26modId%3D4252" />
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnmstats.butr.link%2Fdownloads%3Ftype%3Dtotal%26gameId%3D3174%26modId%3D4252" />
+  </a>
+  <a href="https://www.nexusmods.com/mountandblade2bannerlord/mods/4252" alt="NexusMods IronPython">
+    <img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fnmstats.butr.link%2Fdownloads%3Ftype%3Dviews%26gameId%3D3174%26modId%3D4252" />
   </a>
   </br>
   <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2859285207">
